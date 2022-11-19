@@ -18,10 +18,10 @@ This repository is a collection of demos built using the [Alternativa3D engine](
 |startegy       |Working    |
 |temple         |Working    |
 |mipmapping     |Working    |
-|ParticlesDemo   |Working    |
+|ParticlesDemo  |Working    |
 |SSAODemo       |Working    |
 |maxracer       |Partial    |Only the low preset works, medium and high have basically no resources
-|arena          |Not working|Doesn't load fully, missing some resources
+|arena          |Working    |
 |crash          |Not working|Doesn't load fully, missing some resources
 |gui            |Working    |
 |metro2033      |Not working|Doesn't load, all resources missing
