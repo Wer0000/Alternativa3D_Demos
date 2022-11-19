@@ -1,18 +1,19 @@
-<collada xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
   <asset>
     <contributor>
       <author>semenov</author>
       <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.2.5;  Revision: 59515M;  Platform: x64;  Configuration: Release Max2010</authoring_tool>
       <source_data>file:///C:/Users/semenov/Desktop/Arena/Arena_shadowlight.max</source_data>
     </contributor>
-    <created>2011-06-15T20:04:42</created>
-    <modified>2011-06-15T20:04:42</modified>
+    <created>2011-10-03T01:08:39</created>
+    <modified>2011-10-03T01:08:39</modified>
     <unit name="centimeter" meter="0.01"/>
     <up_axis>Z_UP</up_axis>
   </asset>
   <library_effects>
     <effect id="ColorEffectR255G229B0">
-      <profile_common>
+      <profile_COMMON>
         <technique sid="common">
           <phong>
             <ambient>
@@ -38,7 +39,7 @@
             </transparency>
           </phong>
         </technique>
-      </profile_common>
+      </profile_COMMON>
     </effect>
   </library_effects>
   <library_materials>
@@ -50,7 +51,7 @@
     <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
       <technique_common>
         <ambient>
-          <color>0.03921569 0.03529412 0.04705883</color>
+          <color>0.2117647 0.2156863 0.2588235</color>
         </ambient>
       </technique_common>
     </light>
@@ -1262,6 +1263,39 @@
         </technique>
       </extra>
     </light>
+    <light id="Direct01-light" name="Direct01">
+      <technique_common>
+        <directional>
+          <color>0.08627451 0.09019608 0.1411765</color>
+        </directional>
+      </technique_common>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <light>
+            <aspect_ratio>1</aspect_ratio>
+            <atmosphere_color_amount>1</atmosphere_color_amount>
+            <atmosphere_on>0</atmosphere_on>
+            <atmosphere_opacity>1</atmosphere_opacity>
+            <attenuation_far_end>200</attenuation_far_end>
+            <attenuation_far_start>80</attenuation_far_start>
+            <attenuation_near_end>40</attenuation_near_end>
+            <attenuation_near_start>0</attenuation_near_start>
+            <contrast>0</contrast>
+            <decay_falloff>40</decay_falloff>
+            <decay_type>0</decay_type>
+            <diffuse_soften>0</diffuse_soften>
+            <falloff>45</falloff>
+            <hotspot_beam>43</hotspot_beam>
+            <multiplier>0.00999999</multiplier>
+            <overshoot>0</overshoot>
+            <shadow_density>1</shadow_density>
+            <shadow_map>0</shadow_map>
+            <use_far_attenuation>0</use_far_attenuation>
+            <use_near_attenuation>0</use_near_attenuation>
+          </light>
+        </technique>
+      </extra>
+    </light>
   </library_lights>
   <library_visual_scenes>
     <visual_scene id="MaxScene">
@@ -1655,6 +1689,13 @@
         <translate>5734.411 742.163 1654.735</translate>
         <instance_light url="#Omni75_s-light"/>
       </node>
+      <node id="node-Direct01" name="Direct01" layer="Ligths">
+        <matrix>-0.9973685 -0.06707715 0.0275113 -639.4102 0.07249977 -0.9227703 0.3784689 8438.568 0 0.3794675 0.9252051 15983.05 0 0 0 1</matrix>
+        <instance_light url="#Direct01-light"/>
+      </node>
+      <node id="node-Direct01.Target" name="Direct01.Target" layer="Ligths">
+        <translate>-1114.672 1900.464 0</translate>
+      </node>
     </visual_scene>
   </library_visual_scenes>
   <scene>
@@ -1667,4 +1708,4 @@
       </library>
     </technique>
   </extra>
-</collada>
+</COLLADA>
